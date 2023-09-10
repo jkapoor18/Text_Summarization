@@ -1,131 +1,69 @@
-# End to end Text-Summarizer-Project
+# Text Summarizer Project
 
-## Workflows
+<p align="center">
+  <img src="![Alt text](image.png)">
+</p>
 
-1. Update config.yaml
-2. Update params.yaml
-3. Update entity
-4. Update the configuration manager in src config
-5. update the conponents
-6. update the pipeline
-7. update the main.py
-8. update the app.py
+## Automatic Text Summarization for Efficient Information Extraction
 
+Welcome to the Text Summarizer Project, where we harness the power of natural language processing and machine learning to create a tool that automatically generates concise and informative summaries from lengthy text documents.
 
-# How to run?
-### STEPS:
+## Project Goal 📚
 
-Clone the repository
+Our primary objective is to simplify information consumption:
 
-```bash
-https://github.com/entbappy/End-to-end-Text-Summarization
-```
-### STEP 01- Create a conda environment after opening the repository
+- **Efficient Reading:** Save time and effort by quickly understanding the main points of a document.
+- **Content Extraction:** Automatically extract key insights and relevant details.
+- **Multilingual Support:** Summarize text in multiple languages for global accessibility.
 
-```bash
-conda create -n summary python=3.8 -y
-```
+## Approach 🛠️
 
-```bash
-conda activate summary
-```
+Our strategy revolves around advanced NLP and machine learning techniques:
 
+- **Text Preprocessing:** Clean and prepare text data for analysis.
+- **Feature Extraction:** Identify important sentences and phrases.
+- **Machine Learning Models:** Utilize algorithms for extractive or abstractive summarization.
+- **Scalability:** Design the system to handle large volumes of text.
 
-### STEP 02- install the requirements
-```bash
-pip install -r requirements.txt
-```
+## Tools & Technologies 🧰
 
+Our toolkit includes state-of-the-art tools and technologies:
 
-```bash
-# Finally run the following command
-python app.py
-```
+- **Python:** The primary language for NLP and machine learning development.
+- **NLTK & SpaCy:** NLP libraries for text processing and linguistic analysis.
+- **Gensim:** Topic modeling and document similarity.
+- **Transformer Models:** Leveraging models like BERT and GPT-3 for abstractive summarization.
+- **Web API:** Create a user-friendly interface for summarization.
 
-Now,
-```bash
-open up you local host and port
-```
+## Features That Empower 🌟
 
+- **Summarize Any Text:** Process articles, research papers, news, or any text-based content.
+- **Custom Summaries:** Choose between extractive or abstractive summarization methods.
+- **Multilingual Support:** Access summaries in various languages.
+- **Integration:** Seamlessly integrate summarization into other applications.
 
-```bash
-Author: Krish Naik
-Data Scientist
-Email: krishnaik06@gmail.com
+## Business Outcomes 📈
 
-```
+Our project offers substantial benefits across industries:
 
+- **Time Efficiency:** Accelerate information consumption and research.
+- **Decision Support:** Quickly understand reports, documents, and news articles.
+- **Scalable Solutions:** Implement summarization for data-rich applications.
 
+## Getting Started 🚀
 
-# AWS-CICD-Deployment-with-Github-Actions
+Get started with text summarization by following the instructions in the [User Guide](user-guide.md).
 
-## 1. Login to AWS console.
+## Contribution 🤝
 
-## 2. Create IAM user for deployment
+Join our open-source community! We welcome contributions from NLP enthusiasts and developers worldwide. Start with our [Contribution Guidelines](CONTRIBUTING.md).
 
-	#with specific access
+## License 📝
 
-	1. EC2 access : It is virtual machine
+This project is licensed under the [MIT License](LICENSE).
 
-	2. ECR: Elastic Container registry to save your docker image in aws
+---
+
+Thank you for joining us on this journey to simplify information extraction through text summarization. If you have questions or ideas, please reach out to us at [jyotikpr999@gmail.com](mailto:your-email@example.com).
 
 
-	#Description: About the deployment
-
-	1. Build docker image of the source code
-
-	2. Push your docker image to ECR
-
-	3. Launch Your EC2 
-
-	4. Pull Your image from ECR in EC2
-
-	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/text-s
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-    AWS_ACCESS_KEY_ID=
-
-    AWS_SECRET_ACCESS_KEY=
-
-    AWS_REGION = us-east-1
-
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
-
-    ECR_REPOSITORY_NAME = simple-app
